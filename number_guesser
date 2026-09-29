@@ -1,0 +1,18 @@
+import random
+print("Think of a number between 2 and 1000 and I'll guess it in 20 tries!")
+low = 0 
+high = 1000
+guess = random.randint( low , high)
+status_guess = str(input(f"Is it larger or smaller than {guess}?" ))
+while status_guess != "right":
+    if status_guess == "larger":
+        low = guess
+        guess = int((guess + high)/2)
+        status_guess = input(f"What about {guess}?" )
+    
+    if status_guess == "smaller":
+        high = guess
+        guess = int((guess + low)/2)
+        status_guess = input(f"What about {guess}?" )
+
+print("Your number is", guess )
