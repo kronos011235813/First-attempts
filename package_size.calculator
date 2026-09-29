@@ -1,0 +1,21 @@
+import math
+
+number_1 = float(input("How long is the parcel in cm?"))
+number_2 = float(input("How high is your parcel in cm?"))
+number_3 = float(input("And what is the width in cm?"))
+
+volume = round(number_1* number_2 * number_3 , 4)
+
+if volume <= 10:
+    print("Thats a very tiny parcel! You only need size xs for a volume of" , volume , "cm^3")
+
+elif volume <= 30:
+    print("Thats still a tiny parcel! You only need size s for the volume of " , volume ,"cm^3")
+
+elif volume <= 100:
+    print("You need size m for the volume of " ,volume ,"cm^3")
+
+elif volume <= 250:
+    print("You need size l for the volume of ", volume, "cm^3")
+else :
+    print("You need the largest possible package for a volume of" , volume , "cm^3")
